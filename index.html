@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💀 Romance de Halloween 🎃</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>💀 Romance de Halloween 🎃</h1>
+        </header>
+        <main>
+            <p class="message">En la noche más oscura, bajo la luz de la luna llena, dos almas se encuentran...</p>
+            <button id="revealMessage">¡Revelar Mensaje!</button>
+            <div id="hiddenContent" class="hidden">
+                <p id="hiddenMessage">Feliz Halloween, mi amor eterno. 🎃❤️</p>
+                <div class="image-container">
+                    <div class="roses">
+                        <div class="rose top-left"></div>
+                        <div class="rose top-right"></div>
+                        <div class="rose bottom-left"></div>
+                        <div class="rose bottom-right"></div>
+                    </div>
+                    <img src="1.jpeg" alt="Imagen Romántica Decorada" class="decorada">
+                    <div class="overlay">
+                        <span class="text">Te Quiero</span>
+                    </div>
+                </div>
+            </div>
+            <audio id="audio1" src="numb.mp3"></audio>
+            <audio id="audio2" src="babydoll.mp3"></audio>
+            <audio id="audio3" src="bruja.mp3"></audio>
+        </main>
+        <footer>
+            <p>Dev ❤️ Joshe Gatito <a href="https://joshegatito.github.io/dev/" target="_blank">https://joshegatito.github.io/dev/</a></p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        // Llamar a la función para crear murciélagos
+        window.onload = createBats;
+
+        function createBats() {
+            const numberOfBats = 5; // Número de murciélagos que deseas crear
+            for (let i = 0; i < numberOfBats; i++) {
+                const bat = document.createElement('div');
+                bat.className = 'bat';
+                // Establece posiciones aleatorias
+                bat.style.top = Math.random() * 100 + 'vh';
+                bat.style.left = Math.random() * 100 + 'vw';
+                // Duración de la animación aleatoria
+                bat.style.animationDuration = (5 + Math.random() * 5) + 's';
+                document.body.appendChild(bat);
+            }
+        }
+    </script>
+</body>
+</html>
